@@ -1,0 +1,29 @@
+
+  <nav class="navbar navbar-expand-lg  "dir="rtl">
+    <div class="container-fluid"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand"  routerLinkActive="active" routerLink="/subjects"><img src="../../../../assets/images/school_white_24dp.svg" alt=""> فاينال </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class=" collapse navbar-collapse  align-items-center  justify-content-center " id="navbarSupportedContent">
+        <ul class="nav navbar-right d-flex align-items-center navbar-nav ">
+          <li routerLinkActive="active"  class="nav-item" *ngIf="user?.role == 'doctor'"><a class="nav-link active me-4" aria-current="page" routerLink="/new-exam">أختبار جديد</a></li>
+          <li routerLinkActive="active"  class="nav-item"  *ngIf="user?.role == 'doctor'"><a class="nav-link active me-4" aria-current="page" routerLink="/students">نتيجه الطلاب</a></li>
+          <li routerLinkActive="active"  class="nav-item"><a class="nav-link active me-4" aria-current="page" routerLink="/subjects" *ngIf="user !== null">المواد </a></li>
+          <li routerLinkActive="active"  class="nav-item" (click)="logout()" *ngIf="user !== null"><a class="nav-link active me-4" aria-current="page" routerLink="/login">خروج</a></li>
+          <li routerLinkActive="active"  class="nav-item" *ngIf="user == null"><a class="nav-link active me-4" aria-current="page" routerLink="/login">دخول</a></li>
+          <li routerLinkActive="active"  class="nav-item" *ngIf="user == null"><a class="nav-link active me-4" aria-current="page" routerLink="/register">تسجيل</a></li>
+          <li *ngIf="user !== null" class="username me-5 mt-2">{{user?.username}}</li>
+        </ul>
+        
+  
+      </div>
+    </div>
+  </nav>
+  
+
+
