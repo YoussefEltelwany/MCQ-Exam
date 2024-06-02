@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prebuild": "chmod +x node_modules/.bin/ng",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
