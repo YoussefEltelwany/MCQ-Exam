@@ -1,4 +1,4 @@
 export const environment = {
 
-    apiUrl: 'https://youssefeltelwany.github.io/api/db.json'
+    apiUrl: 'http://localhost:3000/'
 };
